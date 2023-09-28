@@ -1,20 +1,141 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace MKJVHHI
 {
     internal class Program
     {
+
+       public const int MyValue = 10;
+
         // User Define function
         // In build function
         static void Main(string[] args)
         {
+            MyValue = 10;
+
+            //int abccccccccc = 1500;
+
+            //Class1 class2 = new Class1();
+            //class2.Method1();
+            //class2.StudentName = "fdfd";
+
+
+            //ExampleOfout(out class2);
+
+
+            int dsddsd = 10;
+            Class1 class1 = new Class1();
+            class1.Method1();
+            class1.StudentName = "Meet";
+
+            getStringByRef(ref class1);
+
+
+            //Class1 class1 = new Class1();
+
+            class1.Method1();
+            class1.StudentName = "fdfd";
+
+            // sTRING INTERPOLLATION
+            // 
+
+            // padRight and PadLeft
+
+            var MyStting = "HelloW";
+
+            var resultgbdf = MyStting.PadLeft(8, '0');
+            var result23 = MyStting.PadRight(8, '0');
+
+
+
+            string TEMP1 = "mYvVALUE";
+            string TEMP2 = "mYvVALUEFSSFS";
+
+            var newString = $"My New string : {TEMP1} {TEMP2} ";
+
+            var newStringdsd = $"My New string " + TEMP1 + " " + TEMP2;
+
+
+            var a = 10;
+
+            string abc = "Jigar"; // Create new abc object :store value in abc: 
+            abc = "   Thakkar;Patel;    Shah;jain;Nadani    "; // Create new abc object :store value in abc >> abc : Garbage:
+
+            //var NEWvARIABLE =  abc.TrimEnd();
+            //var NEWvARIABLEWEW = abc.TrimStart();
+
+            // String and string > variable declaration
+
+            //abc = String.
+            //abc.ToLower();
+            //abc.ToUpper();
+            var abccccc = abc.Split(';');
+
+            var abcccccSDS = abc.Substring(2, 5);
+
+            var ABCCC = abccccc[0];
+            var ABCCCDSD = abccccc[1];
+            var ABCCCDSDGFDG = abccccc[2];
+
+
+
+
+            var aLength = abc.Length;
+
+            var abcsss = abc.Clone();
+
+            //if (abc.CompareTo("kk"))
+            //{
+
+            //}
+            var compare = abc.LastIndexOf("a");
+
+
+            //var compare = abc.StartsWith("O");
+
+            //var compare = abc.CompareTo("Thakkar");
+
+
+            if (true)
+            {
+
+            }
+
+
+
+            var abcd = 10;
+
+            abcd.ToString(); // Will not handle null value
+            Convert.ToString(abcd); // // Will handle null value
+
+
+
+            var booleanValue = (a == 10) ? true : false;
+
+            if (a == 10)
+            {
+
+            }
+            else
+            {
+                Console.WriteLine("FALSE");
+                Console.WriteLine("hello");
+                Console.WriteLine("hello");
+                Console.WriteLine("hello");
+                Console.WriteLine("hello");
+                Console.WriteLine("hello");
+            }
 
             //int abvccdfd = 20;
             //object obj = abvccdfd; // Boxing
@@ -336,7 +457,6 @@ namespace MKJVHHI
 
             //20 * 3 
             //    60 * 2
-
             // 5,4,3,2,1
             if (abc == 1)
             {
@@ -354,14 +474,25 @@ namespace MKJVHHI
             //}
 
             //abc = 30;
-            
+
         }
 
-        public static void getStringByRef(ref int abc)
+        public static void getStringByRef(ref Class1 abc)
         {
-            abc = 30;
+            //abc = 30;
+            abc.StudentName = "Vivek";
 
         }
+
+        //public static void ExampleOfout(out Class1 abc)
+        //{
+
+        //    abc
+
+        //    // businessdsdfs dssdsfs fss
+
+        ////a = 2000;
+        //}
 
     }
 
