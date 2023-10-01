@@ -7,27 +7,52 @@ public class Class1
     // must initialized while declataion
     // public const int MyValue;
 
-    //declataion
-    public readonly int MyValue1;
+    //public readonly int MyValue1;
+
+    public int UserId { get; set; } // Non Static
+
+    public static string userName { get; set; } // Static
+
+    static Class1()
+    {
+        userName = "Jigar";
+        
+    }
 
 
     public Class1() // Constructor
-	{
-        //MyValue = 10;
-
-        MyValue1 = 10;
-
-
+    {
+        //userName = _userName;
+        UserId = 10;
     }
 
-	public int StudentId { get; set; }
-    public string StudentName { get; set; }
 
-	public void Method1()
-	{
-        //MyValue = 20;
+    //~Class1() { 
+
+    //}
+    //public Class1(int userId = 150, int userId12 = 150) // Constructor
+    //{
+    //}
+
+    //public Class1(int userId = 150, int userId12 = 150, int userId12s = 150) // Constructor
+    //{
+    //}
 
 
-    }
+    //public Class1(Class1 class1) // Constructor
+    //{
+
+    //    //UserId = userId;
+    //}
+
+
+    //public int StudentId { get; set; }
+    //public string StudentName { get; set; }
+
+    //public int Method1(int a, int c = 1)
+    //{
+    //    return UserId;
+
+    //}
 
 }
