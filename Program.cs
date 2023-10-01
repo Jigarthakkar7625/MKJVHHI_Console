@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
@@ -16,13 +17,206 @@ namespace MKJVHHI
     internal class Program
     {
 
-       public const int MyValue = 10;
+        public const int MyValue = 10;
 
         // User Define function
         // In build function
         static void Main(string[] args)
         {
-            MyValue = 10;
+            // Try
+            // Catch
+            // Finally
+            // Throw
+             
+
+            int abcxs = 0;
+
+            throw new Exception("This is my custom exception !!");
+
+            try
+            {
+
+
+                // Open
+
+                try
+                {
+                    try
+                    {
+                        int abcx = 0;
+
+                        if (abcx == 0)
+                        {
+                            throw new Exception("This is my custom exception !!");
+
+                        }
+
+                        //var result = 10 / abcx; // Error
+                    }
+                    catch (Exception ex)
+                    {
+
+
+                        //throw;
+                    }
+                    finally
+                    {
+
+                        Console.WriteLine("");
+                    }
+                }
+                catch (Exception)
+                {
+
+                    //throw;
+                }
+
+                finally
+                {
+                    // Close
+                    Console.WriteLine("Finally");
+                }
+
+
+                // Close
+
+            }
+
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine("DivideByZeroException" + e.Message);
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine("NullReferenceException");
+            }
+            catch (InvalidCastException e)
+            {
+                Console.WriteLine("InvalidCastException");
+
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("IOException");
+
+            }
+            catch (FieldAccessException e)
+            {
+                Console.WriteLine("FieldAccessException");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception");
+            }
+            finally
+            {
+                // Close
+                Console.WriteLine("Finally");
+            }
+            //  finally
+            //{
+            //    // Close
+            //    Console.WriteLine("Finally");
+            //}
+            //catch (Exception)
+            //{
+
+            //    //throw;
+            //}
+
+
+            Console.WriteLine("jigar");
+
+
+            // MyFunction(10, 25, "strig", true, false, 10.5, 'c', 45);
+            // MyFunction(10, 25, "strig", true, false, 10.5, 'c', 45);
+
+            Console.ReadLine();
+            //Class1 class1 = new Class1("Jigar");
+            //Class1 class52 = new Class1("Jigar12");
+            //Class1 class45 = new Class1("Jigar362");
+
+            //Class1.userName = "jigar";
+
+            // Array : 
+
+            // sIMPLE ARRQAY
+            // tWO
+            // mULTI
+            //jAGGED ARRQAY
+
+            int[,] array = new int[2, 2]; // 2D
+            int[,,] arrays = new int[6, 6, 6]; // 2D
+
+            int[][] jaggedARR = new int[3][];
+            jaggedARR[0] = new int[10];
+            jaggedARR[1] = new int[15];
+
+
+            List<int> ints = new List<int>();
+
+
+
+            //arrays[0, 0, 0] = 10;
+            //arrays[0, 0, 0] = 10;
+            //array[0, 2] = 10;
+            //array[1, 1] = 10;
+            //array[1, 2] = 10;
+
+
+            //for (int i = 0; i < array.Count(); i++)
+            //{
+            //    var adfasdsf = array[i];
+            //}
+
+
+
+            Console.WriteLine(GC.GetTotalMemory(false));
+
+            //Class1.userName = "jigasr";
+            Class1 class33 = new Class1();
+
+            Console.WriteLine(GC.GetGeneration(class33));
+
+            Console.WriteLine(GC.CollectionCount(0));
+
+            GC.Collect(0);
+
+            Console.WriteLine(GC.CollectionCount(0));
+
+            Console.WriteLine(GC.GetTotalMemory(false));
+
+            Console.ReadLine();
+
+            // Class1 class33 = new Class1();
+
+            //Class1 class3344 = new Class1(class33);
+
+            //// Constructor  :
+            //// Default, Parameter less
+            //// Parameterize Constructor
+            //// Copy Constructor  
+            //// Static Constructor
+            //// Private Constructor
+
+
+
+            ////Static
+
+            //// Class
+            //// Variable
+            //// Method
+            //// Constructor
+
+            //var abcdd = StaticDemo.UserId;
+            //StaticDemo.Get();
+
+
+            //Class1 class2 = new Class1(15);
+            //var userid =  class2.Method1(15);
+
+            //Class1 class3 = new Class1();
+            //var userid13 = class3.Method1(15);
 
             //int abccccccccc = 1500;
 
@@ -34,18 +228,19 @@ namespace MKJVHHI
             //ExampleOfout(out class2);
 
 
-            int dsddsd = 10;
-            Class1 class1 = new Class1();
-            class1.Method1();
-            class1.StudentName = "Meet";
 
-            getStringByRef(ref class1);
-
-
+            //int dsddsd = 10;
             //Class1 class1 = new Class1();
+            //class1.Method1();
+            //class1.StudentName = "Meet";
 
-            class1.Method1();
-            class1.StudentName = "fdfd";
+            //getStringByRef(ref class1);
+
+
+            ////Class1 class1 = new Class1();
+
+            //class1.Method1();
+            //class1.StudentName = "fdfd";
 
             // sTRING INTERPOLLATION
             // 
@@ -143,7 +338,7 @@ namespace MKJVHHI
             //object abvccdfdsdasd = 20;
             //int objadsa = Convert.ToInt32(abvccdfd); // unxBoxing
 
-            var result = getString(5);
+            //var result = getString(5);
 
             //// Call by value
             //int abc = 20;
@@ -480,10 +675,32 @@ namespace MKJVHHI
         public static void getStringByRef(ref Class1 abc)
         {
             //abc = 30;
-            abc.StudentName = "Vivek";
+            //abc.StudentName = "Vivek";
+
+        }
+        public static void MyFunction(params int[] objects)
+        {
+
+            var a = objects[0];
+            var b = objects[1];
+            var c = objects[3];
+
+            //abc = 30;
+            //abc.StudentName = "Vivek";
 
         }
 
+        public static  int MyFunctions(params int[] objects)
+        {
+            return 1;
+
+            Console.WriteLine("");
+           
+
+            //abc = 30;
+            //abc.StudentName = "Vivek";
+
+        }
         //public static void ExampleOfout(out Class1 abc)
         //{
 
@@ -493,6 +710,8 @@ namespace MKJVHHI
 
         ////a = 2000;
         //}
+
+
 
     }
 
