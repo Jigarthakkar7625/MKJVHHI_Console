@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
@@ -14,8 +16,50 @@ using System.Threading.Tasks;
 
 namespace MKJVHHI
 {
-    internal class Program
+    // Enc
+    // Abs
+    // Inheritance
+    // Polymorphism
+
+    //Access Modifier : 
+    //Public : Anywhere in project
+
+    //Private : { } :within { }
+    //Protected : Class + Inharited class1 >> Inharited class2 ??
+    //internal : Current Assembly 
+    //protected internal ::  Current Assembly  +  Derive class
+    // Private Protected :: Class+Derive class + Current Assembly 
+
+    // Inharitace : 
+
+    // Single
+    // Multi level
+    // Multiple level
+    //Hybrid inh
+    //Hirarchical inh
+
+
+
+
+
+    public enum Days
     {
+        [Description("January First Mnonth")]
+        JanuaryFirstMnonth = 10,
+        [Description("feb 2 Mnonth")]
+        feb = 15,
+        [Description("march 3 Mnonth")]
+        march,
+        [Description("april 4 Mnonth")]
+        april = 20
+
+    }
+
+
+    public static class Program
+    {
+
+
 
         public const int MyValue = 10;
 
@@ -23,11 +67,45 @@ namespace MKJVHHI
         // In build function
         static void Main(string[] args)
         {
+
+            ChildClass childClass = new ChildClass();
+            //childClass.MyParentProperty = 10;
+            //childClass.MyChildProperty = 20;
+
+
+            //ChildClass childClass1 = new ParentClass();
+
+            ParentClass childClass1ss = new ChildClass();
+
+
+            Class1 class1 = new Class1(10);
+
+
+            string enumDesc = Days.JanuaryFirstMnonth.DescriptionAttr();
+            string enumDesc1 = Days.JanuaryFirstMnonth.ToString();
+            int enumDesc1s = (int)Days.JanuaryFirstMnonth;
+
+            foreach (var item in Enum.GetValues(typeof(Days)))
+            {
+                Console.WriteLine(item);
+            }
+
+            var jan = Days.JanuaryFirstMnonth;
+            var feb = (int)Days.feb;
+            var march = (int)Days.march;
+            var april = (int)Days.april;
+
             // Try
             // Catch
             // Finally
             // Throw
-             
+
+            StructName structName = new StructName();
+            structName.name = 10;
+
+            //StructName structName = new StructName();
+            //structName.MyMethod();
+
 
             int abcxs = 0;
 
@@ -174,7 +252,7 @@ namespace MKJVHHI
             Console.WriteLine(GC.GetTotalMemory(false));
 
             //Class1.userName = "jigasr";
-            Class1 class33 = new Class1();
+            Class1 class33 = new Class1(10);
 
             Console.WriteLine(GC.GetGeneration(class33));
 
@@ -647,6 +725,18 @@ namespace MKJVHHI
         //            c6
         //        C4
 
+
+        public static string DescriptionAttr<T>(this T source)
+        {
+            FieldInfo fi = source.GetType().GetField(source.ToString());
+
+            DescriptionAttribute[] attributes = (DescriptionAttribute[])fi.GetCustomAttributes(
+                typeof(DescriptionAttribute), false);
+
+            if (attributes != null && attributes.Length > 0) return attributes[0].Description;
+            else return source.ToString();
+        }
+
         public static int getString(int abc)
         {
 
@@ -690,12 +780,12 @@ namespace MKJVHHI
 
         }
 
-        public static  int MyFunctions(params int[] objects)
+        public static int MyFunctions(params int[] objects)
         {
             return 1;
 
             Console.WriteLine("");
-           
+
 
             //abc = 30;
             //abc.StudentName = "Vivek";

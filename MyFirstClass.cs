@@ -9,22 +9,21 @@ public class Class1
 
     //public readonly int MyValue1;
 
-    public int UserId { get; set; } // Non Static
+    private int UserId { get; set; } // Non Static
 
     public static string userName { get; set; } // Static
 
-    static Class1()
+    public Class1(int _UserId)
     {
-        userName = "Jigar";
-        
+        UserId = _UserId;
     }
 
 
-    public Class1() // Constructor
-    {
-        //userName = _userName;
-        UserId = 10;
-    }
+    //public Class1() // Constructor
+    //{
+    //    //userName = _userName;
+    //    UserId = 10;
+    //}
 
 
     //~Class1() { 
@@ -49,10 +48,22 @@ public class Class1
     //public int StudentId { get; set; }
     //public string StudentName { get; set; }
 
-    //public int Method1(int a, int c = 1)
+    private int Method1(int a, int c = 1)
+    {
+
+        return UserId;
+
+    }
+
+}
+
+
+ struct StructName
+{
+    public int id, name;
+
+    //public string MyMethod()
     //{
-    //    return UserId;
-
+    //    return "Jigar";
     //}
-
 }
