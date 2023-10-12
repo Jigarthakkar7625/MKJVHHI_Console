@@ -43,8 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GenericConstraincs.cs" />
     <Compile Include="InharitanceDemo.cs" />
     <Compile Include="MyFirstClass.cs" />
+    <Compile Include="Partial1.cs" />
+    <Compile Include="partial2.cs" />
+    <Compile Include="Polymorphismcs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaticDemo.cs" />

@@ -67,6 +67,235 @@ namespace MKJVHHI
         // In build function
         static void Main(string[] args)
         {
+            GenericConstraincs<int> genericConstraincs = new GenericConstraincs<int>();
+            genericConstraincs.Add(10, 0);
+            genericConstraincs.Add(20, 1);
+            genericConstraincs.Add(30, 2);
+
+             var abcList = genericConstraincs.ToList();
+
+            //Generic Constrain
+            //1. STruct
+            //Class
+            //new()
+            //Baseclass
+            //interface
+
+
+
+            //Hashtable hashtable = new Hashtable();
+            //hashtable.Add("12", "sdfs");
+            //hashtable.Add(null, "sfsdfdfs");
+            //hashtable.Add("1225", "");
+
+
+            // NON :
+
+            // Array list
+            // Dic
+            // SortedList
+            // hashtable
+            // Stack and que
+
+            //ArrayList arrayList = new ArrayList();
+
+            //arrayList.Add("dsad");
+            //arrayList.Add(false);
+            //arrayList.Add(10);
+            //arrayList.Add(10.5);
+            //arrayList.Add('c');
+
+            //ArrayList arrayList1 = new ArrayList();
+
+
+            //arrayList1.Add("fdsf");
+
+
+            //arrayList.AddRange(arrayList1);
+
+            SortedList queue = new SortedList();// Fifo : First in First out
+            queue.Add(15, "Value");
+
+            //Dictionary dic = new Dictionary();
+
+            Stack stack = new Stack();
+            Queue Queue = new Queue();
+
+
+
+            /*queue.Enqueue(10)*/
+            ;
+
+            // Generic Collection
+
+            // List
+            // Dictionary
+
+            Dictionary<string, string> dic = new Dictionary<string, string>();
+            dic.Add("Jigar", "Jigar");
+            dic.Add("Vivek", "Vivek");
+            dic.Add("Ishita", "Ishita");
+            dic.Add("Meet", "Meet");
+            dic.Add("Meet12", null);
+
+
+            SortedList<string, string> dic12 = new SortedList<string, string>();
+            dic12.Add("Jigar", "Jigar");
+            dic12.Add("Vivek", "Vivek");
+            dic12.Add("Ishita", "Ishita");
+            dic12.Add("Meet", "Meet");
+            dic12.Add("Meet12", null);
+
+
+            Queue<int> ints3 = new Queue<int>(); // Fifo : First in First out
+            ints3.Enqueue(1);
+            ints3.Enqueue(2);
+            ints3.Enqueue(3);
+
+
+            ints3.Dequeue();
+
+            var abvvvv = ints3.Peek();
+
+
+            Stack<int> sssssss = new Stack<int>(); // Lifo : Last in First out
+            sssssss.Push(1);
+            sssssss.Push(2);
+            sssssss.Push(3);
+
+
+            sssssss.Pop();
+
+            var sssssssfgf = sssssss.Peek();
+
+
+            //dic.ContainsKey("Vivek");
+            //var abvcvcc =  dic["Ishita"];
+
+
+            Partial2 partial2 = new Partial2();
+
+
+
+            //GenericConstraincsClass<string> genericConstraincsClass = new GenericConstraincsClass<string>();
+
+            //GenericConstraincsNew<int> genericConstraincsNew = new GenericConstraincsNew<int>(10);
+
+            GenericConstraincsBaseClass<Customer> genericConstraincsBaseClass = new GenericConstraincsBaseClass<Customer>();
+
+            //genericConstraincsClass.Remove(partial2);
+
+
+            //genericConstraincsBaseClass.
+
+
+
+
+            GenericConstraincs<long> genericConstraincs1 = new GenericConstraincs<long>();
+
+            GenericConstraincs<bool> genericConstraincs2 = new GenericConstraincs<bool>();
+
+
+
+
+            List<long> ints1 = new List<long>();
+
+            ints1.Add(10);
+            ints1.Add(15);
+
+            ints1.Sort();
+
+            var abbbbb = ints1.Find(x => x == 15);
+
+            if (ints1.Contains(1500))
+            {
+
+            }
+
+
+            List<string> ints2 = new List<string>();
+            ints2.Add("");
+            ints2.Add(null);
+
+            List<Partial1236> obj = new List<Partial1236>();
+            //{
+            //        new Partial1236() {MyProperty = 15 },
+            //        new Partial1236() {MyProperty = 20 }
+
+            //};
+
+            Partial1236 partialclass = new Partial1236();
+            partialclass.MyProperty = 15;
+            Partial1236 partialclass1 = new Partial1236();
+            partialclass1.MyProperty = 20;
+            obj.Add(partialclass);
+            obj.Add(partialclass1);
+
+
+            List<Partial1236> obj123 = new List<Partial1236>();
+            Partial1236 partialclass12122 = new Partial1236();
+            partialclass12122.MyProperty = 250;
+            partialclass12122.FilterProp = "Jigar";
+
+            Partial1236 partialclass112121 = new Partial1236();
+            partialclass112121.MyProperty = 300;
+            partialclass112121.FilterProp = "Vivek";
+
+
+
+
+
+            obj123.Add(partialclass12122);
+            obj123.Add(partialclass112121);
+
+            var avcv = obj123.Find(x => x.FilterProp == "Vivek");
+
+            obj.AddRange(obj123);
+
+
+            foreach (var item in obj)
+            {
+
+                var abcccc = item;
+
+            }
+
+
+
+
+
+
+            //Partial1 partial = new Partial1();
+            //partial.
+
+            //Polymorphismcs polymorphismcs = new ChildPolymorphismcs();
+            //var resultPoly =  polymorphismcs.get(10);
+
+            ChildPolymorphismcs randObj = new ChildPolymorphismcs();
+            var a = randObj.NextDouble(); // Custom result
+
+
+            Random random = new Random();
+
+            var bbbb = randObj.NextDouble();
+
+            //var abc = randObj.Sample();
+
+
+            //Random random = new Random();
+
+            //var aabcdsdsd = random.samm();
+
+            //            var aabcdd = random.Sample();
+
+
+
+
+
+            //polymorphismcs.Get("");
+            //polymorphismcs.Get(10);
+
+
 
             ChildClass childClass = new ChildClass();
             //childClass.MyParentProperty = 10;
@@ -340,7 +569,7 @@ namespace MKJVHHI
             var newStringdsd = $"My New string " + TEMP1 + " " + TEMP2;
 
 
-            var a = 10;
+            //var a = 10;
 
             string abc = "Jigar"; // Create new abc object :store value in abc: 
             abc = "   Thakkar;Patel;    Shah;jain;Nadani    "; // Create new abc object :store value in abc >> abc : Garbage:

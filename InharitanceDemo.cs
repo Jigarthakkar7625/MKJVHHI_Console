@@ -10,6 +10,10 @@ namespace MKJVHHI
     {
         public int MyParentProperty { get; set; }
 
+        public ParentClass() { 
+        
+        }
+
         public void MyParentMethod()
         {
 
@@ -24,8 +28,11 @@ namespace MKJVHHI
 
     }
 
+    //  Loose Coupling
+    //  multiple inheritance
     interface IA
     {
+
         void IAMethod();
 
     }
@@ -51,6 +58,14 @@ namespace MKJVHHI
         }
     }
 
+
+    public class myInterface : IA
+    {
+        public void IAMethod()
+        {
+            //throw new NotImplementedException();
+        }
+    }
 
 
 
