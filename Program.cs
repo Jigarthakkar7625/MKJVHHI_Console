@@ -16,6 +16,8 @@ using System.Threading.Tasks;
 
 namespace MKJVHHI
 {
+    //File IO
+
     // Enc
     // Abs
     // Inheritance
@@ -67,12 +69,71 @@ namespace MKJVHHI
         // In build function
         static void Main(string[] args)
         {
+
+
+
+            using (TextReader w = File.OpenText("E:\\Sample Text File\\My.txt")) // Interview question
+            {
+                w.ReadLine(); // FirstLine
+                w.ReadToEnd();
+                //w.WriteLine("Hello");
+                //w.WriteLine("fdasfdsfds");
+                //w.WriteLine("Helsdfsdfsdflo");
+                //w.WriteLine("sdfsdfsf");
+                //w.WriteLine("Hellsdfsdffdo");
+
+            }
+
+            //FileStream fileStream = new FileStream("E:\\Sample Text File\\My.txt", FileMode.OpenOrCreate);
+            //StreamReader streamWriter = new StreamReader(fileStream);
+
+            //Console.WriteLine(streamWriter.ReadLine());
+
+            //streamWriter.Close();
+            //fileStream.Close();
+
+
+            ////for (int i = 0; i < 40; i++)
+            ////{
+            //int myLength = 0;
+
+            //while ((myLength = fileStream.ReadByte())!= -1) {
+
+            //    Console.WriteLine((char)myLength);
+            //}
+
+            //fileStream.Close();
+            //fileStream.Dispose();
+
+            //}
+
+            //byte[] bytes = Encoding.ASCII.GetBytes("My Name is Jigar");
+
+            //fileStream.Write(bytes, 0, bytes.Length);
+
+            //fileStream.Dispose();
+            //fileStream.Close();
+            //GenericConstraincsNew<Partial1236> genericConstraincsClass123 = new GenericConstraincsNew<Partial1236>();
+
+            //GenericConstraincsBaseClass<ChildClassNew123> genericConstraincsBaseClass1 = new GenericConstraincsBaseClass<ChildClassNew123>();
+
+            GenericConstraincsinterface<ChildInterfaceClass123> genericConstraincsinterface = new GenericConstraincsinterface<ChildInterfaceClass123>();
+
+
+            GenericConstraincsinterface<IMyInterfaceChildTU, IMyInterfaceTU> genericConstraincsinterface1 = new GenericConstraincsinterface<IMyInterfaceChildTU, IMyInterfaceTU>();
+
+            //genericConstraincsinterface1.MyMethod()
+
+
+            //GenericConstraincsinterface<ChildWithoutInterfaceClass> genericConstraincsinterface12333 = new GenericConstraincsinterface<ChildWithoutInterfaceClass>();
+
+
             GenericConstraincs<int> genericConstraincs = new GenericConstraincs<int>();
             genericConstraincs.Add(10, 0);
             genericConstraincs.Add(20, 1);
             genericConstraincs.Add(30, 2);
 
-             var abcList = genericConstraincs.ToList();
+            var abcList = genericConstraincs.ToList();
 
             //Generic Constrain
             //1. STruct
@@ -176,12 +237,18 @@ namespace MKJVHHI
             Partial2 partial2 = new Partial2();
 
 
+            List<Partial1236> partial1236s = new List<Partial1236>();
 
-            //GenericConstraincsClass<string> genericConstraincsClass = new GenericConstraincsClass<string>();
+            GenericConstraincsClass<Partial1236> genericConstraincsClass = new GenericConstraincsClass<Partial1236>(10);
+
+
+
+
+
 
             //GenericConstraincsNew<int> genericConstraincsNew = new GenericConstraincsNew<int>(10);
 
-            GenericConstraincsBaseClass<Customer> genericConstraincsBaseClass = new GenericConstraincsBaseClass<Customer>();
+            //GenericConstraincsBaseClass<Customer> genericConstraincsBaseClass = new GenericConstraincsBaseClass<Customer>();
 
             //genericConstraincsClass.Remove(partial2);
 

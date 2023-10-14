@@ -21,6 +21,11 @@ namespace MKJVHHI
         public int MyProperty { get; set; }
         public string FilterProp { get; set; }
 
+        public Partial1236()
+        {
+       
+        }
+
         public void myMethod()
         {
 
