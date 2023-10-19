@@ -16,6 +16,8 @@ using System.Threading.Tasks;
 
 namespace MKJVHHI
 {
+    public delegate void PrintMsgFunctionDelgate(string Message);
+
     //File IO
 
     // Enc
@@ -61,6 +63,7 @@ namespace MKJVHHI
     public static class Program
     {
 
+        delegate void Calculate(int a); // Declation
 
 
         public const int MyValue = 10;
@@ -69,20 +72,108 @@ namespace MKJVHHI
         // In build function
         static void Main(string[] args)
         {
+            // Unitcast >> Single Method
+            // Multicast >> Mutiple Method
+
+            //Calculate calculate = new Calculate(StaticDemo.Add);
+
+            //Calculate calculate = StaticDemo.Add; // initialization
+            //calculate(10);
+
+
+            //Calculate calculateMulti = StaticDemo.Multiplication; // initialization
+            //calculateMulti(15); //invoke
 
 
 
-            using (TextReader w = File.OpenText("E:\\Sample Text File\\My.txt")) // Interview question
+            Calculate calculateMultiCast = StaticDemo.Add;
+            calculateMultiCast += StaticDemo.Multiplication; // Multicast
+
+            calculateMultiCast(22);
+
+
+
+
+            Dictionary<int, string> keyValuePairs = new Dictionary<int, string>();
+
+            keyValuePairs.Add(1, "jigar"
+                );
+
+            Tuple<int, string, string, string, int, bool, int> tuple = Tuple.Create(1, "jigar", "jigar", "fdsd", 15, true, 12);
+
+            var Item1 = tuple.Item1;
+            var Item2 = tuple.Item2;
+            var Item3 = tuple.Item3;
+
+
+
+            var tuple123 = Tuple.Create(1, "jigar", "jigar", "fdsd", 15, true, 12, Tuple.Create(1, 2, 3, 4, 5, 6, 7, Tuple.Create(1, 2, 3, 4, 5, 6, 7)));
+
+            var Item8 = tuple123.Rest;
+
+            var RestTuple1 = tuple123.Rest.Item1.Item1;
+
+
+
+
+            FileInfo fileInfo = new FileInfo("E:\\Sample Text File\\My151120.txt");
+            var fileName = fileInfo.FullName;
+
+
+            DirectoryInfo directoryInfo = new DirectoryInfo("E:\\Sample Text File\\");
+
+            if (directoryInfo.Exists)
             {
-                w.ReadLine(); // FirstLine
-                w.ReadToEnd();
-                //w.WriteLine("Hello");
-                //w.WriteLine("fdasfdsfds");
-                //w.WriteLine("Helsdfsdfsdflo");
-                //w.WriteLine("sdfsdfsf");
-                //w.WriteLine("Hellsdfsdffdo");
+                var A = directoryInfo.GetFiles();
+
+                for (int i = 0; i < A.Length; i++)
+                {
+
+                    FileInfo fileInfo123 = new FileInfo(A[i].FullName);
+
+                    if (fileInfo123.Extension == ".txt")
+                    {
+                        // .txt
+
+                    }
+
+                }
+
 
             }
+
+
+
+            StreamWriter streamWriter = File.CreateText("E:\\Sample Text File\\My151120.txt");
+
+
+            streamWriter.WriteLine("Jigar Thakkar");
+
+            streamWriter.Close();
+            streamWriter.Dispose();
+
+
+            //if (!fileInfo.Exists)
+            //{
+            //    fileInfo.Create();
+            //}
+
+
+            Console.WriteLine("File Created Successsfully!!");
+
+            //using (TextReader w = File.OpenText("E:\\Sample Text File\\My.txt")) // Interview question
+            //{
+            //    w.ReadLine(); // FirstLine
+            //    w.ReadToEnd();
+            //    //w.WriteLine("Hello");
+            //    //w.WriteLine("fdasfdsfds");
+            //    //w.WriteLine("Helsdfsdfsdflo");
+            //    //w.WriteLine("sdfsdfsf");
+            //    //w.WriteLine("Hellsdfsdffdo");
+
+            //}
+
+
 
             //FileStream fileStream = new FileStream("E:\\Sample Text File\\My.txt", FileMode.OpenOrCreate);
             //StreamReader streamWriter = new StreamReader(fileStream);
@@ -1021,7 +1112,10 @@ namespace MKJVHHI
         //            c6
         //        C4
 
-
+        public static void PrintMessage(string msg)
+        {
+            Console.WriteLine(msg);
+        }
         public static string DescriptionAttr<T>(this T source)
         {
             FieldInfo fi = source.GetType().GetField(source.ToString());

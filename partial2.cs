@@ -10,6 +10,8 @@ namespace MKJVHHI
     {
         public int MyProperty { get; set; }
 
+        //public abstract void GetData();
+
         public void myMethod1()
         {
 
